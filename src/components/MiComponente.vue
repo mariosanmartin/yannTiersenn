@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>Mi primer impotente</p>
+    <h2>Desde Componente 1 | conceptos basicos</h2>
+    <p>Probando hasta cierto puntos la reactividad de Vue</p>
     <!-- <p v-if="condicion">Este mensaje se mostrara</p> -->
     <ul v-if="condicion">
       <li>Madara el mas picante de todos</li>
@@ -29,11 +30,16 @@
       </ul>
     </div>
 
+    {{ calcular() }} | {{ calcular() }} |
+    {{ calcular() }}
+
     <!-- {{ miVariable }} -->
   </div>
 </template>
 
 <script>
+//Variable global
+let total = 0;
 export default {
   name: "MiComponente",
   data() {
@@ -56,8 +62,18 @@ export default {
         width: "300px",
         height: "30px",
         fontSize: "20px"
-      }
+      },
+      valorius: 20
     };
+  },
+  methods: {
+    calcular() {
+      // let auxiliar = this.valorius * 2;
+      total++;
+      return total;
+      // return this.valorius * 2;
+      // console.log(auxiliar);
+    }
   }
 };
 </script>

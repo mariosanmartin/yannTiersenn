@@ -1,5 +1,17 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Conceptos desde Componentes</h1>
+    <SobreMi />
+    <eje-computed />
   </div>
 </template>
+<script>
+import SobreMi from "@/components/SobreMi.vue";
+import EjeComputed from "@/components/EjeComputed.vue";
+export default {
+  components: {
+    SobreMi,
+    EjeComputed
+  }
+};
+</script>

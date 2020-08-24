@@ -7,7 +7,11 @@
       {{ newTask }}
       <input type="submit" value="Crear Tarea" />
       <ul>
-        <li v-for="(task, i) in tasks" :key="`task` + i">
+        <li
+          v-for="(task, i) in tasks"
+          :key="`task` + i"
+          :class="{ completed: task.completed }"
+        >
           {{ task.text }}
         </li>
       </ul>
@@ -27,7 +31,7 @@ export default {
     createTask() {
       let task = {
         text: this.newTask,
-        completed: false
+        completed: true
       };
       // Mete la tarea en el array tareas
       this.tasks.push(task);
@@ -39,4 +43,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+</style>

@@ -6,6 +6,11 @@
       <input type="text" v-model="newTask" id="task" />
       {{ newTask }}
       <input type="submit" value="Crear Tarea" />
+      <ul>
+        <li v-for="(task, i) in tasks" :key="`task` + i">
+          {{ task.text }}
+        </li>
+      </ul>
     </form>
   </div>
 </template>

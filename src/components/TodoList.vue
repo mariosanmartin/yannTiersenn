@@ -53,7 +53,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .task-list {
   width: 800px;
   max-width: 100%;
@@ -78,7 +78,7 @@ export default {
   height: 35px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 2);
+  box-shadow: 5px 1px 4px rgba(0, 0, 0, 2);
   background-color: #2ecc71;
   color: #ecf0f1;
   cursor: pointer;

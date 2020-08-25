@@ -34,6 +34,7 @@ const routes = [
     path: "/personajes",
     name: "Personajes",
     component: Personajes
+    // props: true
   }
 ];
 
